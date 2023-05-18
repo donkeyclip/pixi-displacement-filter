@@ -1,6 +1,6 @@
 {
   "name": "@donkeyclip/Pixi-DisplacementFilter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Pixi-DisplacementFilter plugin for motorcortex",
   "main": "dist/Pixi-DisplacementFilter.cjs.js",
   "module": "dist/Pixi-DisplacementFilter.esm.js",
