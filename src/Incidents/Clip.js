@@ -3,7 +3,7 @@ import { Application, Sprite, DisplacementFilter, Texture } from "pixi.js";
 
 export default class MyClip extends BrowserClip {
   onAfterRender() {
-    let app = new Application({
+    const app = new Application({
       width: this.attrs.width,
       height: this.attrs.height,
     });
@@ -11,7 +11,7 @@ export default class MyClip extends BrowserClip {
     const texture = Texture.from(this.attrs.imgUrl);
     const texture2 = Texture.from(this.attrs.mapUrl);
 
-    let img = new Sprite(texture);
+    const img = new Sprite(texture);
     img.width = this.attrs.width;
     img.height = this.attrs.height;
     app.stage.addChild(img);
