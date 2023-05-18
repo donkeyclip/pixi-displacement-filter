@@ -1,14 +1,14 @@
 {
-  "name": "@donkeyclip/Pixi-DisplacementFilter",
+  "name": "@donkeyclip/pixi-displacement-filter",
   "version": "0.0.0",
-  "description": "Pixi-DisplacementFilter plugin for motorcortex",
-  "main": "dist/Pixi-DisplacementFilter.cjs.js",
-  "module": "dist/Pixi-DisplacementFilter.esm.js",
-  "browser": "dist/Pixi-DisplacementFilter.umd.js",
+  "description": "Pixi Displacement Filter plugin for motorcortex",
+  "main": "dist/pixi-displacement-filter.cjs.js",
+  "module": "dist/pixi-displacement-filter.esm.js",
+  "browser": "dist/pixi-displacement-filter.umd.js",
   "author": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/donkeyclip/Pixi-DisplacementFilter"
+    "url": "https://github.com/donkeyclip/pixi-displacement-filter"
   },
   "license": "MIT",
   "engines": {

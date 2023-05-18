@@ -1,6 +1,6 @@
 import { loadPlugin, HTMLClip } from "@donkeyclip/motorcortex";
 import Player from "@donkeyclip/motorcortex-player";
-import PluginDefinition from "../dist/Fake-3d.esm";
+import PluginDefinition from "../dist/pixi-displacement-filter.esm";
 const MyPlugin = loadPlugin(PluginDefinition);
 
 const clip = new HTMLClip({
