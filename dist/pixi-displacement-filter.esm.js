@@ -22792,7 +22792,7 @@ class MyClip extends BrowserClip {
 }
 
 var name = "@donkeyclip/pixi-displacement-filter";
-var version = "0.0.0";
+var version = "1.0.1";
 var description = "Pixi Displacement Filter plugin for motorcortex";
 var main = "dist/pixi-displacement-filter.cjs.js";
 var module = "dist/pixi-displacement-filter.esm.js";
