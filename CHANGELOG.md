@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/donkeyclip/Pixi-DisplacementFilter/compare/v1.0.1...v2.0.0) (2023-05-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* add opaciti incident
+
+### Bug Fixes
+
+* add opaciti incident ([7c44ed0](https://github.com/donkeyclip/Pixi-DisplacementFilter/commit/7c44ed034c5ab74ca5cebf2342a429fccbaf34ed))
+
 ## [1.0.1](https://github.com/donkeyclip/Pixi-DisplacementFilter/compare/v1.0.0...v1.0.1) (2023-05-18)
 
 ### Bug Fixes
