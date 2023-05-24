@@ -33,8 +33,20 @@ const newCustomClip = new MyPlugin.Clip(
   {
     width: 1920,
     height: 1080,
-    imgUrl: "./Frame.png",
-    mapUrl: "./Frame2.png",
+    imageSet: [
+      {
+        imgUrl: "./room.png",
+        mapUrl: "./room-map.png",
+      },
+      {
+        imgUrl: "./room1.png",
+        mapUrl: "./room1-map.png",
+      },
+      // {
+      //   imgUrl: "./room2.png",
+      //   mapUrl: "./room2-map.png",
+      // },
+    ],
   },
   {
     selector: "#myclip",
@@ -45,31 +57,77 @@ const newCustomClip = new MyPlugin.Clip(
   }
 );
 
-const play = new MyPlugin.Scale(
+const Alphaplay = new MyPlugin.Alpha(
   {
     animatedAttrs: {
-      scale: { x: -20, y: 0 },
+      alpha: 1,
+    },
+    initialAttrs: {
+      alpha: 0,
     },
   },
   {
-    duration: 1500,
-    selector: "!#displacement",
+    duration: 1000,
+    selector: "!#spite-0",
+  }
+);
+const Alphaplay1 = new MyPlugin.Alpha(
+  {
+    animatedAttrs: {
+      alpha: 1,
+    },
+    initialAttrs: {
+      alpha: 0,
+    },
+  },
+  {
+    duration: 1000,
+    selector: "!#spite-1",
+  }
+);
+// const Alphaplay2 = new MyPlugin.Alpha(
+//   {
+//     animatedAttrs: {
+//       alpha: 1,
+//     },
+//     initialAttrs: {
+//       alpha: 0,
+//     },
+//   },
+//   {
+//     duration: 10,
+//     selector: "!#spite-2",
+//   }
+// );
+
+const play = new MyPlugin.Scale(
+  {
+    animatedAttrs: {
+      scale: { x: -40, y: 0 },
+    },
+  },
+  {
+    duration: 3000,
+    selector: "!#map-0",
   }
 );
 const play2 = new MyPlugin.Scale(
   {
     animatedAttrs: {
-      scale: { x: 0, y: 0 },
+      scale: { x: -40, y: 0 },
     },
   },
   {
-    duration: 1500,
-    selector: "!#displacement",
+    duration: 3000,
+    selector: "!#map-1",
   }
 );
 
+newCustomClip.addIncident(Alphaplay, 0);
 newCustomClip.addIncident(play, 0);
-newCustomClip.addIncident(play2, 3500);
+// newCustomClip.addIncident(Alphaplay2, 3000);
+newCustomClip.addIncident(Alphaplay1, 3000);
+newCustomClip.addIncident(play2, 3000);
 clip.addIncident(newCustomClip, 0);
 
-new Player({ clip, backgroundColor: "#fff", loop: true, autoplay: true });
+new Player({ clip, backgroundColor: "#fff" });
