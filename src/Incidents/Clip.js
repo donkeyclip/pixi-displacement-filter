@@ -7,19 +7,21 @@ export default class MyClip extends BrowserClip {
       width: this.attrs.width,
       height: this.attrs.height,
     });
+    app.stage.filters = [];
     this.context.rootElement.appendChild(app.view);
-    const texture = Texture.from(this.attrs.imgUrl);
-    const texture2 = Texture.from(this.attrs.mapUrl);
-
-    const img = new Sprite(texture);
-    img.width = this.attrs.width;
-    img.height = this.attrs.height;
-    app.stage.addChild(img);
-
-    const depthMap = new Sprite(texture2);
-    app.stage.addChild(depthMap);
-    const displacementFilter = new DisplacementFilter(depthMap);
-    app.stage.filters = [displacementFilter];
-    this.setCustomEntity("displacement", displacementFilter);
+    this.attrs.imageSet.forEach((element, i) => {
+      const texture = Texture.from(element.imgUrl);
+      const textureDepth = Texture.from(element.mapUrl);
+      const img = new Sprite(texture);
+      img.width = this.attrs.width;
+      img.height = this.attrs.height;
+      app.stage.addChild(img);
+      const depthMap = new Sprite(textureDepth);
+      app.stage.addChild(depthMap);
+      const displacementFilter = new DisplacementFilter(depthMap);
+      img.filters = [displacementFilter];
+      this.setCustomEntity(`map-${i}`, displacementFilter);
+      this.setCustomEntity(`spite-${i}`, img);
+    });
   }
 }

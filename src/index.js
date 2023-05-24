@@ -2,6 +2,7 @@ import Scale from "./Incidents/Scale";
 import MyClip from "./Incidents/Clip";
 
 import pkg from "../package.json";
+import Alpha from "./Incidents/Alpha";
 
 export default {
   npm_name: pkg.name,
@@ -22,6 +23,20 @@ export default {
                 },
                 y: { type: "number" },
               },
+            },
+          },
+        },
+      },
+    },
+    {
+      exportable: Alpha,
+      name: "Alpha",
+      attributesValidationRules: {
+        animatedAttrs: {
+          type: "object",
+          props: {
+            alpha: {
+              type: "number",
             },
           },
         },
